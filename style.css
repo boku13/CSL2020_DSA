@@ -50,6 +50,9 @@ section {
 }
 
 table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
@@ -78,4 +81,61 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburger-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #444;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.75rem 1rem;
+        margin: 0;
+        border-bottom: 1px solid #555;
+        text-align: left;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    th, td {
+        padding: 8px 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
 }

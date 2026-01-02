@@ -14,14 +14,17 @@
         <h1>CSL 2020 : Data Structures and Algorithms</h1>
     </header>
     <nav>
-        <a href="#course-content">Course Content</a>
-        <a href="#evaluation">Evaluation</a>
-        <a href="#slides">Slides</a>
-        <a href="#labs">Labs</a>
-        <a href="#quizzes">Quizzes</a>
-        <a href="#assignments">Assignments</a>
-        <a href="#exams">Exams</a>
-        <a href="#instructors">Instructors</a>
+        <button class="hamburger-button" id="hamburger-button">&#9776;</button>
+        <div class="nav-links" id="nav-links">
+            <a href="#course-content">Course Content</a>
+            <a href="#evaluation">Evaluation</a>
+            <a href="#slides">Slides</a>
+            <a href="#labs">Labs</a>
+            <a href="#quizzes">Quizzes</a>
+            <a href="#assignments">Assignments</a>
+            <a href="#exams">Exams</a>
+            <a href="#instructors">Instructors</a>
+        </div>
     </nav>
     <main>
         <section id="course-content">
@@ -214,6 +217,10 @@
                         });
                 }
             }
+        });
+
+        document.getElementById('hamburger-button').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
         });
     </script>
 </body>
